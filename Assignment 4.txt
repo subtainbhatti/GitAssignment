@@ -1,0 +1,17 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+PATH= 'H:\chromedriver.exe'
+driver=webdriver.Chrome(PATH)
+driver.get('https://lms.umt.edu.pk/login/index.php')
+username=driver.find_element_by_id('username')
+password=driver.find_element_by_id('password')
+username.send_keys('f2017065195')
+password.send_keys('A8&K7RfX')
+ntb=driver.find_element_by_id("page-login-index")
+ntb.click()
+btn=driver.find_element_by_id("yui_3_17_2_1_1653277513055_198")
+sections=driver.find_element_by_class_name('media-body')
+time.sleep(1000)
+driver.quit()

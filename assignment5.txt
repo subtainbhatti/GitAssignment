@@ -1,0 +1,14 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+PATH= 'H:\chromedriver.exe'
+driver=webdriver.Chrome(PATH)
+driver.get('https://unsplash.com/s/photos/nature')
+driver.find_element_by_class_name("YVj9w")
+
+driver.get('https://unsplash.com/s/photos/beach')
+driver.find_element_by_class_name("js-focus-visible")
+driver.get('https://unsplash.com/s/photos/animal')
+driver.find_element_by_class_name("VQW0y Jl9NH")
+time.sleep(1000)

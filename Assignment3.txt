@@ -1,0 +1,18 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
+from bs4 import BeautifulSoup
+import time
+import pandas as  pd
+from selenium.webdriver.chrome.options import Options
+chrome_options = Options()
+PATH= 'H:\chromedriver.exe'
+driver=webdriver.Chrome(PATH)
+driver.get('https://go.drugbank.com/covid-19#drugs')
+chrome_options.add_experimental_option("detach", True)
+element=driver.find_element_by_class_name("pages-c covid_19-a has-banner")
+i=1
+while i!=10:
+    print(element[i])
+    i=i+1
+time.sleep(1000)
